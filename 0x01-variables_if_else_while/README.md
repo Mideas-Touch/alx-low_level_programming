@@ -19,4 +19,7 @@
 - Task 4. **Alphabet** - prints the alphabet in lowercase, followed by a new line. 
 	- Print all the letters except q and e
 	- You can only use the putchar function twice (every other function (printf, puts, etc…) is forbidden)
-- Task 5 - prints all single digit numbers of base 10 starting from 0, followed by a new line. 
+- Task 5 - prints all single digit numbers of base 10 starting from 0, followed by a new line.
+- Task 6 - prints all single digit numbers of base 10 starting from 0, followed by a new line.
+	- You are not allowed to use any variable of type char
+	- You can only use the putchar function twice (every other function (printf, puts, etc…) is forbidden) 
