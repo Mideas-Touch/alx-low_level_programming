@@ -15,4 +15,7 @@
 		* if the last digit of n is less than 6 and not 0: the string and is less than 6 and not 0
 	- followed by a new line
 - Task 2. **Alphabet game** -prints the alphabet in lowercase, followed by a new line. You can only use the putchar function (every other function (printf, puts, etc…) is forbidden).
-- Task 3. **alphABET** - prints the alphabet in lowercase, and then in uppercase, followed by a new line. You can only use the putchar function only thrice(every other function (printf, puts, etc…) is forbidden)
+- Task 3. **alphABET** - prints the alphabet in lowercase, and then in uppercase, followed by a new line. You can only use the putchar function only thrice(every other function (printf, puts, etc…) is forbidden).
+- Task 4. **Alphabet** - prints the alphabet in lowercase, followed by a new line. 
+	- Print all the letters except q and e
+	- You can only use the putchar function twice (every other function (printf, puts, etc…) is forbidden)
