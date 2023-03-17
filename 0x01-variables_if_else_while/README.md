@@ -25,4 +25,6 @@
 	- You can only use the putchar function twice (every other function (printf, puts, etc…) is forbidden)
 - Task 7 - prints the lowercase alphabet in reverse, followed by a new line.
 - Task 8 - prints all the numbers of base 16 in lowercase, followed by a new line.
- 
+- Task 9 -  prints all possible combinations of single-digit numbers. 
+	- Numbers must be separated by ,, followed by a space
+	- Numbers should be printed in ascending order 
