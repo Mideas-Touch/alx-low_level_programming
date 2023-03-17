@@ -23,4 +23,6 @@
 - Task 6 - prints all single digit numbers of base 10 starting from 0, followed by a new line.
 	- You are not allowed to use any variable of type char
 	- You can only use the putchar function twice (every other function (printf, puts, etc…) is forbidden)
-- Task 7 - prints the lowercase alphabet in reverse, followed by a new line. 
+- Task 7 - prints the lowercase alphabet in reverse, followed by a new line.
+- Task 8 - prints all the numbers of base 16 in lowercase, followed by a new line.
+ 
