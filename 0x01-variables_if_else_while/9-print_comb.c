@@ -1,24 +1,29 @@
-include <stdio.h>
-
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
-* main - Print all possible combinations of single digit numbers
-*
-* Return: Always 0 (Success)
-*/
+ * main - Entry point
+ * Description: Prints the alphabet in lowercase.
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-		int number;
+	int n;
 
-		for (number = 0; number <= 9; number++)
+	for (n = '0' ; n <= '9' ; n++)
+	{
+	putchar(n);
+		if (n < '9')
 		{
-		putchar(number + '0');
-		if (number < 9)
+			putchar(',');
+			putchar(' ');
+		}
+		else
 		{
-		putchar(',');
-		putchar(' ');
+			break;
 		}
-		}
-		putchar('\n');
+	}
+	putchar('\n');
 
-	return (0);
+return (0);
 }
