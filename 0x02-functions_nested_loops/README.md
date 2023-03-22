@@ -18,3 +18,6 @@
 	* Returns -1 and prints - if n is less than zero
 - Task 6-computes the absolute value of an integer.
 	* Prototype: int _abs(int);
+- Task 7-prints the last digit of a number.
+	* Prototype: int print_last_digit(int);
+	* Returns the value of the last digit
