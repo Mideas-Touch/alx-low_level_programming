@@ -23,4 +23,10 @@
 	* Returns the value of the last digit
 - Task 8-prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
 - Task 9-prints the 9 times table, starting with 0.
-- Task 10-adds two integers and returns the result.	
+- Task 10-adds two integers and returns the result.
+- Task 11-a function that prints all natural numbers from n to 98, followed by a new line.
+	* Prototype: void print_to_98(int n);
+	* Numbers must be separated by a comma, followed by a space
+	* Numbers should be printed in order
+	* The first printed number should be the number passed to your function
+	* The last printed number should be 98	
