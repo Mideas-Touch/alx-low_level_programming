@@ -22,4 +22,5 @@
 	* Prototype: int print_last_digit(int);
 	* Returns the value of the last digit
 - Task 8-prints every minute of the day of Jack Bauer, starting from 00:00 to 23:59.
-- Task 9-prints the 9 times table, starting with 0.	
+- Task 9-prints the 9 times table, starting with 0.
+- Task 10-adds two integers and returns the result.	
