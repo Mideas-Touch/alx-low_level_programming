@@ -1,10 +1,8 @@
 #include "main.h"
 /**
  * main - prints the string "_putchar" from a character array.
- *
- * Return: Always 0 (Success)
+ * Return: 0 on success.
  */
-
 int main(void)
 {
 	char p[] = "_putchar";
