@@ -1,26 +1,27 @@
 #include "main.h"
 /**
- * _strncpy - copy at most n characters from source string
- * @src: source string
- * @dest: destination string
- * @n: number of characters to be appended
+ * _strncpy - copy a string
+ * @dest: input value
+ * @src: input value
+ * @n: input value
+ *
  * Return: dest
  */
 char *_strncpy(char *dest, char *src, int n)
 {
-	int index = 0;
-	int src_len = 0;
+	int j;
 
-	while (src[index])/*copy characters from source increamenting index*/
-		src_len++;
-
-	for (index = 0; index < n && src[index]; index++)/*copy src to dest*/
+	j = 0;
+	while (j < n && src[j] != '\0')
 	{
-		dest[index] = src[index];
+		dest[j] = src[j];
+		j++;
 	}
-
-	for (index = src_len; index < n; index++)/*fill null-terminator*/
-		dest[index] = '\n';
+	while (j < n)
+	{
+		dest[j] = '\0';
+		j++;
+	}
 
 	return (dest);
 }
