@@ -1,83 +1,51 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * print_i - prints int
- * @list: arguement of list
- * @s: seperator
- * Return: none
- */
-void print_i(va_list list, char *s)
-{
-	printf("%s%d", s, va_arg(list, int));
-}
-/**
- * print_c - prints char
- * @list: arguement char
- * @sep: seperator
- */
-void print_c(va_list list, char *sep)
-{
-	printf("%s%c", sep, va_arg(list, int));
-}
-/**
- * print_s - prints string
- * @sep: seperator
- * @list: list to print
- * Return: none
- */
-void print_s(va_list list, char *sep)
-{
-	char *s;
-
-	s = va_arg(list, char *);
-	if (s == NULL)
-		s = "(nil)";
-	printf("%s%s", sep, s);
-}
-/**
- * print_f - prints floats
- * @sep: float to print
- * @list: next arguement of list to print
- * Return: none
- */
-void print_f(va_list list, char *sep)
-{
-	printf("%s%f", sep, va_arg(list, double));
-}
-/**
- * print_all - prints out all stuff
- * @format: format is list of types of arguements
+ * print_all - prints char, integer, float and string format
+ * @format: array with the initial letter of the format to print
+ * @...: parameters
  */
 void print_all(const char * const format, ...)
 {
-	va_list list;
-	char *sep;
-	int i, j;
-	fm_t fm[] = {
-		{"c", print_c},
-		{"i", print_i},
-		{"f", print_f},
-		{"s", print_s},
-		{NULL, NULL}
-	};
-	va_start(list, format);
-	i = 0;
-	sep = "";
-	while (format != NULL && format[i] != '\0')
+	char *p;
+	int a = 0;
+	va_list forlist;
+
+	va_start(forlist, format);
+	while (format == NULL)
 	{
-		j = 0;
-		while (j < 4)
-		{
-			if (format[i] == *(fm[j]).fm)
-			{
-				fm[j].p(list, sep);
-				sep = ", ";
-			}
-			j++;
-		}
-		i++;
+		printf("\n");
+		return;
 	}
-	printf("\n");
-	va_end(list);
+	while (format[a] != '\0')
+	{
+		switch (format[a])
+		{
+			case 'c':
+				printf("%c", (char)va_arg(forlist, int));
+				break;
+			case 'i':
+				printf("%d", va_arg(forlist, int));
+				break;
+			case 'f':
+				printf("%f", (float)va_arg(forlist, double));
+				break;
+			case 's':
+				p = va_arg(forlist, char*);
+					if (p != NULL)
+					{
+						printf("%s", p);
+						break;
+					}
+					printf("(nil)");
+					break;
+		}
+		if ((format[a] == 'c' || format[a] == 'i' || format[a] == 'f'
+		|| format[a] == 's')  && format[a + 1] != '\0')
+			printf(", ");
+		a++;
+	}
+	printf("\n"), va_end(forlist);
 }
+
